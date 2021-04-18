@@ -5,16 +5,14 @@ require('dotenv/config');
 
 const app = express();
 
-const db = monk(process.env.MONGO_URI || "localhost:5000/quoter",() => console.log("Connected to DB"));
+const db = monk(process.env.MONGO_URI || "localhost:5000/quoter", () => console.log("Connected to DB"));
 const quotes = db.get("quotes");
 
 app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.json({
-        message: "Hello",
-    });
+    res.render("index");
 });
 
 function isvalidquote(quote) {
@@ -31,7 +29,7 @@ app.get('/quoter', (req, res) => {
         .find()
         .then(quotes => {
             res.json(quotes);
-    });
+        });
 });
 
 app.post("/quoter", (req, res) => {
@@ -41,7 +39,11 @@ app.post("/quoter", (req, res) => {
             quote: req.body.quote.toString(),
             color: req.body.color.toString(),
             sculpted: new Date().getDate().toString() + '/' + new Date().getMonth().toString() + '/' + new Date().getFullYear().toString(),
-            time: new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+            time: new Date().toLocaleString('en-US', {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true
+            })
         };
 
         quotes.insert(Quotes).then((createdquote) => {
