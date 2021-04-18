@@ -1,7 +1,7 @@
 
 const form = document.querySelector("form");
 const loading_element = document.querySelector(".loading-gif");
-const API_URL = "https://quoter-app.herokuapp.com/";
+const API_URL = '127.0.0.1' ? 'http://localhost:5000/quoter' : "https://quoter-app.herokuapp.com/";
 
 const quote_feed = document.querySelector(".quote-feed");
 const errorElement = document.querySelector(".required");
