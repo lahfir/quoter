@@ -8,6 +8,8 @@ const app = express();
 const db = monk(process.env.MONGO_URI || "localhost:5000/quoter", () => console.log("Connected to DB"));
 const quotes = db.get("quotes");
 
+app.use(express.static("public"))
+
 app.use(cors());
 app.use(express.json());
 
