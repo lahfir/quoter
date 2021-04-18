@@ -484,7 +484,7 @@ header .dark-icon .svg-inactive {
 
 .main-grid .content-container {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .main-grid .content-container .main-quote-container {
@@ -500,7 +500,7 @@ header .dark-icon .svg-inactive {
   width: auto;
   height: auto;
   background: #ffffff;
-  --borderWidth: 5px;
+  --borderWidth: 7px;
   position: relative;
   border-radius: var(--borderWidth);
 }

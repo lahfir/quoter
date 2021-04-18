@@ -375,7 +375,7 @@ header {
 
     .content-container {
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
 
         .main-quote-container {
             grid-area: quote-container;
@@ -384,7 +384,7 @@ header {
             width: auto;
             height: auto;
             background: $container-color;
-            --borderWidth: 5px;
+            --borderWidth: 7px;
             position: relative;
             border-radius: var(--borderWidth);
 
