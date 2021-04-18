@@ -55,6 +55,6 @@ app.post("/quoter", (req, res) => {
     }
 });
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log("listening on 5000");
 });
