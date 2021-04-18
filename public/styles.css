@@ -462,6 +462,8 @@ header .dark-icon .svg-inactive {
 }
 
 .main-grid .form-container .inner-form .submit-btn #submit {
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   font-family: 'Dancing Script', cursive;
   font-style: normal;
