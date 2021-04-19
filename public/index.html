@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quoter</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="Assets/Q.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="Assets/Q.png" type="image/gif" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -358,6 +358,9 @@
           </form>
         </div>
       </div>
+      <h1 id="paq" style="text-align: center; color: rgba(0, 0, 0, 0.295)">
+        Publish a Quote
+      </h1>
       <div class="quote-feed">
         <!-- <div class="content-container">
           <div class="main-quote-container">
@@ -467,6 +470,8 @@
           form_container.css("background-color", "white");
           for (var i = 0; i < quote_container.length; i++) {
             quote_container[i].style.backgroundColor = "white";
+            quote_container[i].style.backgroundImage =
+              "linear-gradient(315deg,#d7e1ec 0%, white 74%)";
           }
           document.body.style.backgroundColor = "#E4E4E4";
         } else {
@@ -475,11 +480,13 @@
           $("h1").addClass("head-color-change");
           $("#quote").addClass("content-color-change");
           $("p").addClass("head-color-change");
-          form_container.css("background-color", "#525252");
+          form_container.css("background-color", "#404040");
           for (var i = 0; i < quote_container.length; i++) {
-            quote_container[i].style.backgroundColor = "#525252";
+            quote_container[i].style.backgroundColor = "#2d3436";
+            quote_container[i].style.backgroundImage =
+              "linear-gradient(315deg, #2d3436 0%, #1f1f1f 74%)";
           }
-          document.body.style.backgroundColor = "#252525";
+          document.body.style.backgroundColor = "#202020";
         }
       }
     </script>

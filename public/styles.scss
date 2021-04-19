@@ -1,6 +1,6 @@
 $bg-color:#f1f1f1;
 $primary-color:#E0245E;
-$heading-color:#312E2E;
+$heading-color:#353535;
 $content-color: #5f5f5f;
 $container-color:#ffffff;
 
@@ -14,7 +14,7 @@ body {
     transition: background 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
     background: $bg-color;
     scroll-behavior: smooth;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -231,7 +231,7 @@ header {
                 padding: 0px 10px;
                 outline: none;
                 width: 100%;
-                color: #646464;
+                color: $heading-color;
                 font-weight: 400;
                 font-size: 15px;
                 height: 49px;
@@ -389,7 +389,7 @@ header {
             border-radius: var(--borderWidth);
 
             .inner-quote-container {
-                word-break: break-all;
+                word-break: break-word;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -450,8 +450,6 @@ header {
                             cursor: pointer;
                             display: flex;
                             align-items: center;
-                            width: 80px;
-                            height: 40px;
                             background: #FFDCE2;
                             margin-right: 7px;
                             border: none;

@@ -34,6 +34,13 @@ app.get('/quoter', (req, res) => {
         });
 });
 
+app.get('/quoter/:id/delete', (req, res) => {
+    db.delete({_id: req.params.id},function(err){
+        if(err) res.json(err);
+        else res.redirect('/');
+    });
+});
+
 app.post("/quoter", (req, res) => {
     if (isvalidquote(req.body)) {
         const Quotes = {
